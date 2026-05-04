@@ -902,8 +902,10 @@ button:hover {
 }
 
 .contact {
-  background: var(--ink);
-  color: var(--bg);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface-strong) 70%, transparent), var(--bg));
+  border-top: 1px solid var(--line);
+  color: var(--ink);
   display: grid;
   gap: 42px;
   grid-template-columns: minmax(0, 1fr) minmax(280px, auto);
@@ -913,57 +915,87 @@ button:hover {
 }
 
 .contact p {
-  color: color-mix(in srgb, var(--bg) 72%, transparent);
+  color: var(--muted);
 }
 
 .contact .section-kicker {
-  color: #83e5d8;
+  color: var(--accent);
 }
 
 .contact .button.secondary {
   background: transparent;
-  border-color: color-mix(in srgb, var(--bg) 24%, transparent);
-  color: var(--bg);
+  border-color: var(--line);
+  color: var(--ink);
 }
 
 .link-directory {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   min-width: min(520px, 100%);
 }
 
 .link-row {
-  background: rgba(239, 249, 255, 0.12);
-  border: 1px solid rgba(239, 249, 255, 0.3);
+  align-items: center;
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
+  box-shadow: var(--shadow);
   color: var(--ink);
   cursor: pointer;
   display: grid;
+  font: inherit;
   gap: 6px;
-  padding: 16px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: 78px;
+  padding: 16px 18px;
   text-align: left;
   transition: background 180ms ease, transform 180ms ease, border-color 180ms ease;
   width: 100%;
 }
 
+.link-row::after {
+  align-items: center;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  border-radius: 50%;
+  color: var(--accent-strong);
+  content: "->";
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 900;
+  height: 34px;
+  justify-content: center;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+  width: 34px;
+}
+
 .link-row:hover {
-  background: rgba(239, 249, 255, 0.2);
-  border-color: rgba(239, 249, 255, 0.5);
+  background: color-mix(in srgb, var(--surface-strong) 92%, transparent);
+  border-color: var(--accent);
   box-shadow: 0 0 32px rgba(0, 229, 255, 0.15);
   transform: translateY(-2px);
 }
 
+.link-row:hover::after {
+  background: linear-gradient(135deg, var(--accent), var(--plum));
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
 .link-row span {
-  color: #00c9dd;
+  color: var(--accent);
   font-size: 12px;
   font-weight: 900;
+  grid-column: 1;
   text-transform: uppercase;
 }
 
 .link-row strong {
-  color: #ffffff;
+  color: var(--ink);
   font-size: 14px;
   font-weight: 900;
+  grid-column: 1;
   line-height: 1.4;
   overflow-wrap: anywhere;
 }

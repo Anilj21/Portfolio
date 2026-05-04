@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import heroImage from '../assets/hero-workspace.png'
+import cvPdf from '../assets/docs/Anil-Jangid-CV.pdf'
 
 export default function Hero({ showToast }) {
   const [counts, setCounts] = useState({ envs: 0, modes: 0 })
@@ -32,7 +33,7 @@ export default function Hero({ showToast }) {
   const handleDownload = (e) => {
     e.preventDefault()
     const link = document.createElement('a')
-    link.href = 'assets/docs/Anil-Jangid-CV.pdf'
+    link.href = cvPdf
     link.download = 'Anil-Jangid-CV.pdf'
     document.body.appendChild(link)
     link.click()
@@ -64,7 +65,7 @@ export default function Hero({ showToast }) {
           <a className="button primary" href="#work">
             Read Case Files
           </a>
-          <a className="button glass" href="assets/docs/Anil-Jangid-CV.pdf">
+          <a className="button glass" href={cvPdf} target="_blank" rel="noopener noreferrer">
             Open Resume
           </a>
           <button className="button glass" onClick={handleDownload}>

@@ -1,18 +1,18 @@
 export default function Contact({ showToast }) {
   const contacts = [
     {
-      label: 'Email',
+      label: 'Email me',
       value: 'aniljangid1311@gmail.com',
       href: 'mailto:aniljangid1311@gmail.com',
     },
     {
-      label: 'LinkedIn',
+      label: 'LinkedIn profile',
       value: 'in.linkedin.com/in/anil-jangid-a03992293',
       href: 'https://in.linkedin.com/in/anil-jangid-a03992293',
     },
     {
-      label: 'Open Resume PDF',
-      value: 'assets/docs/Anil-Jangid-CV.pdf',
+      label: 'View resume',
+      value: 'Anil-Jangid-CV.pdf',
       href: 'assets/docs/Anil-Jangid-CV.pdf',
     },
   ]
@@ -42,7 +42,7 @@ export default function Contact({ showToast }) {
           </a>
         ))}
         <button className="link-row" type="button" onClick={handleDownload}>
-          <span>Download Resume PDF</span>
+          <span>Download resume</span>
           <strong>Anil-Jangid-CV.pdf</strong>
         </button>
         <a
@@ -51,7 +51,7 @@ export default function Contact({ showToast }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>GitHub</span>
+          <span>GitHub profile</span>
           <strong>github.com/Anilj21</strong>
         </a>
       </div>
