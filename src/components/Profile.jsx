@@ -1,4 +1,4 @@
-export default function Profile() {
+export default function Profile({ onProfileClick }) {
   const profiles = [
     {
       id: '01',
@@ -28,11 +28,16 @@ export default function Profile() {
       </div>
       <div className="profile-grid">
         {profiles.map((item) => (
-          <article key={item.id}>
+          <button
+            key={item.id}
+            className="profile-card"
+            type="button"
+            onClick={onProfileClick}
+          >
             <span>{item.id}</span>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-          </article>
+          </button>
         ))}
       </div>
     </section>

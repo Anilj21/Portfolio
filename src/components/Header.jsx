@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export default function Header({ isScrolled, navOpen, onNavToggle, theme, onThemeChange }) {
+export default function Header({ isScrolled, navOpen, onNavToggle, onProfileClick, theme, onThemeChange }) {
   const [activeSection, setActiveSection] = useState('top')
 
   useEffect(() => {
@@ -34,10 +34,17 @@ export default function Header({ isScrolled, navOpen, onNavToggle, theme, onThem
 
   return (
     <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
-      <a className="brand" href="#top" aria-label="Anil Jangid home">
-        <span className="brand-mark">AJ</span>
+      <button
+        className="brand"
+        type="button"
+        aria-label="Open Anil Jangid profile"
+        onClick={onProfileClick}
+      >
+        <span className="brand-mark">
+          <img src="/assets/profile-photo.png" alt="" />
+        </span>
         <span>Anil Jangid</span>
-      </a>
+      </button>
 
       <nav className={`site-nav ${navOpen ? 'is-open' : ''}`}>
         {navLinks.map((link) => (

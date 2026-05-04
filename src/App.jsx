@@ -8,6 +8,7 @@ import Skills from './components/Skills'
 import Notes from './components/Notes'
 import Contact from './components/Contact'
 import Modal from './components/Modal'
+import AboutModal from './components/AboutModal'
 import Toast from './components/Toast'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   const [navOpen, setNavOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
+  const [aboutOpen, setAboutOpen] = useState(false)
   const [selectedProject, setSelectedProject] = useState(null)
   const [toast, setToast] = useState(null)
 
@@ -27,8 +29,8 @@ function App() {
 
   useEffect(() => {
     document.body.classList.toggle('nav-open', navOpen)
-    document.body.classList.toggle('modal-open', modalOpen)
-  }, [navOpen, modalOpen])
+    document.body.classList.toggle('modal-open', modalOpen || aboutOpen)
+  }, [navOpen, modalOpen, aboutOpen])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,12 +51,13 @@ function App() {
         isScrolled={isScrolled}
         navOpen={navOpen}
         onNavToggle={setNavOpen}
+        onProfileClick={() => setAboutOpen(true)}
         theme={theme}
         onThemeChange={setTheme}
       />
       <main id="top">
         <Hero showToast={showToast} />
-        <Profile />
+        <Profile onProfileClick={() => setAboutOpen(true)} />
         <Projects onProjectClick={(project) => {
           setSelectedProject(project)
           setModalOpen(true)
@@ -74,6 +77,7 @@ function App() {
           }}
         />
       )}
+      <AboutModal isOpen={aboutOpen} onClose={() => setAboutOpen(false)} />
       {toast && <Toast message={toast} />}
     </div>
   )

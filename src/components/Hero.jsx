@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import heroImage from '../assets/hero-workspace.png'
-import cvPdf from '../assets/docs/Anil-Jangid-CV.pdf'
+
+const resumePdf = '/assets/docs/Anil_Jangid_Resume.pdf'
 
 export default function Hero({ showToast }) {
   const [counts, setCounts] = useState({ envs: 0, modes: 0 })
@@ -33,8 +34,8 @@ export default function Hero({ showToast }) {
   const handleDownload = (e) => {
     e.preventDefault()
     const link = document.createElement('a')
-    link.href = cvPdf
-    link.download = 'Anil-Jangid-CV.pdf'
+    link.href = resumePdf
+    link.download = 'Anil_Jangid_Resume.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -59,13 +60,13 @@ export default function Hero({ showToast }) {
         <div className="identity-strip" aria-label="Current profile">
           <span>B.Tech CSE, 2022-2026</span>
           <span>Scaler AI Labs QA Intern</span>
-          <span>Aurangabad, Maharashtra</span>
+          <span>Chh. Sambhajinagar, Maharashtra</span>
         </div>
         <div className="hero-actions">
           <a className="button primary" href="#work">
             Read Case Files
           </a>
-          <a className="button glass" href={cvPdf} target="_blank" rel="noopener noreferrer">
+          <a className="button glass" href={resumePdf} target="_blank" rel="noopener noreferrer">
             Open Resume
           </a>
           <button className="button glass" onClick={handleDownload}>

@@ -10,6 +10,7 @@
   --gold: #b7ff4a;
   --coral: #ff4fd8;
   --plum: #7c5cff;
+  --modal-bg: #0b1420;
   --shadow: 0 30px 90px rgba(0, 229, 255, 0.13);
   --radius: 8px;
 }
@@ -26,6 +27,7 @@
   --gold: #6a8f00;
   --coral: #b21e83;
   --plum: #4d39d6;
+  --modal-bg: #ffffff;
   --shadow: 0 30px 80px rgba(0, 72, 92, 0.14);
 }
 
@@ -134,13 +136,20 @@ img {
 }
 
 .brand {
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
   font-weight: 900;
   gap: 10px;
+  padding: 0;
 }
 
 .brand-mark {
   align-items: center;
   background: linear-gradient(135deg, var(--accent), var(--plum));
+  border: 2px solid color-mix(in srgb, var(--accent) 58%, transparent);
   border-radius: 50%;
   color: #ffffff;
   box-shadow: 0 0 28px rgba(0, 229, 255, 0.34);
@@ -148,7 +157,14 @@ img {
   font-size: 13px;
   height: 38px;
   justify-content: center;
+  overflow: hidden;
   width: 38px;
+}
+
+.brand-mark img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .site-nav {
@@ -499,7 +515,7 @@ button:hover {
   gap: 14px;
 }
 
-.profile-grid article,
+.profile-card,
 .project-card,
 .internship-card,
 .skills-shell,
@@ -511,8 +527,25 @@ button:hover {
   backdrop-filter: blur(18px);
 }
 
-.profile-grid article {
+.profile-card {
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
   padding: 24px;
+  text-align: left;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  width: 100%;
+}
+
+.profile-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 26px 70px rgba(0, 229, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.profile-card:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 46%, transparent);
+  outline-offset: 4px;
 }
 
 .profile-grid span {
@@ -523,6 +556,7 @@ button:hover {
 }
 
 .profile-grid p,
+.profile-card p,
 .project-body p,
 .internship-card p,
 .timeline p,
@@ -1042,10 +1076,10 @@ button:hover {
 }
 
 .modal-card {
-  background: var(--surface);
+  background: var(--modal-bg);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: 0 36px 120px rgba(0, 0, 0, 0.45), var(--shadow);
   left: 50%;
   max-width: 680px;
   padding: clamp(24px, 5vw, 42px);
@@ -1096,6 +1130,67 @@ button:hover {
 
 .modal-copy ul {
   padding-left: 20px;
+}
+
+.about-card {
+  max-width: 760px;
+}
+
+.about-header {
+  align-items: center;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 112px 1fr;
+  margin-bottom: 24px;
+  padding-right: 44px;
+}
+
+.about-avatar {
+  align-items: center;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--accent), var(--plum));
+  border: 3px solid color-mix(in srgb, var(--ink) 84%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.22), 0 0 34px rgba(0, 229, 255, 0.2);
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 32px;
+  font-weight: 900;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-avatar img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.about-avatar span {
+  position: relative;
+  z-index: 1;
+}
+
+.about-avatar.has-photo {
+  background: var(--bg);
+}
+
+.about-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.about-facts span {
+  background: color-mix(in srgb, var(--accent) 11%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  border-radius: 999px;
+  color: var(--accent-strong);
+  font-size: 12px;
+  font-weight: 900;
+  padding: 7px 10px;
 }
 
 .toast {
@@ -1211,5 +1306,13 @@ button:hover {
   .site-footer {
     align-items: start;
     flex-direction: column;
+  }
+
+  .about-header {
+    grid-template-columns: 1fr;
+  }
+
+  .about-avatar {
+    width: 96px;
   }
 }

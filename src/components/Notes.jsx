@@ -14,7 +14,7 @@ export default function Notes() {
     },
     {
       type: 'Education',
-      title: 'JNEC Aurangabad',
+      title: 'JNEC Chh. Sambhajinagar',
       body: 'B.Tech CSE, CGPA 6.65/10, expected June 2026.',
     },
     {
