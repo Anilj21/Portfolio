@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anil Jangid | Software Developer + QA Intern</title>
+    <meta
+      name="description"
+      content="Anil Jangid's portfolio: full-stack projects, AI document processing, YOLOv8 object detection, and QA work on reinforcement learning web environments."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Anil Jangid home">
+        <span class="brand-mark">AJ</span>
+        <span>Anil Jangid</span>
+      </a>
+
+      <nav class="site-nav" data-nav>
+        <a href="#work">Work</a>
+        <a href="#internship">QA Log</a>
+        <a href="#skills">Stack</a>
+        <a href="#notes">Notes</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" type="button" aria-label="Switch to light theme" data-theme-toggle>
+          <span class="theme-glyph" aria-hidden="true"></span>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" data-nav-toggle>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/hero-workspace.png"
+          alt="Desk setup with laptop, notebook, and design tools"
+        />
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Software Developer + QA Intern</p>
+          <h1 id="hero-title">I build software like I test it.</h1>
+          <p class="hero-lede">
+            Patient with edge cases. Curious about AI systems. Focused on interfaces
+            that behave correctly when real users take the long route.
+          </p>
+          <div class="identity-strip" aria-label="Current profile">
+            <span>B.Tech CSE, 2022-2026</span>
+            <span>Scaler AI Labs QA Intern</span>
+            <span>Aurangabad, Maharashtra</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="#work">Read Case Files</a>
+            <a class="button glass" href="assets/docs/Anil-Jangid-CV.pdf">Open Resume</a>
+            <a class="button glass" href="assets/docs/Anil-Jangid-CV.pdf" download="Anil-Jangid-CV.pdf">Download Resume</a>
+            <a
+              class="button glass"
+              href="https://in.linkedin.com/in/anil-jangid-a03992293"
+              data-redirect
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Live portfolio summary">
+          <div class="metric-card">
+            <span data-count-to="12">0</span>
+            <p>RL replica environments signed off</p>
+          </div>
+          <div class="metric-card">
+            <span data-count-to="4">0</span>
+            <p>testing modes: functional, UI, exploratory, regression</p>
+          </div>
+          <div class="metric-card terminal-card">
+            <code>status --open-to-work</code>
+            <p>developer roles, internships, AI/product teams</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section profile-section" aria-label="Profile summary">
+        <div class="profile-copy">
+          <p class="section-kicker">Why Me</p>
+          <h2>My advantage is the mix: builder instincts plus tester discipline.</h2>
+        </div>
+        <div class="profile-grid">
+          <article>
+            <span>01</span>
+            <h3>I learn systems by using them deeply.</h3>
+            <p>
+              During the Scaler AI Labs internship, every RL environment started with
+              understanding the original product flow before writing useful bugs.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>I can move between UI, backend, and AI tooling.</h3>
+            <p>
+              SmartDocs uses React, Express.js, Ollama, Firebase auth, and Tailwind UI.
+              YOLOv8 ID detection added dataset prep, annotation, and inference practice.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>I write for the next person in the workflow.</h3>
+            <p>
+              Bug tickets, reproduction steps, expected vs actual behavior, and regression
+              checks trained me to communicate clearly with developers.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Case Files</p>
+            <h2 id="work-title">Projects presented as work, not decoration.</h2>
+          </div>
+          <div class="filter-bar" role="list" aria-label="Project filters">
+            <button class="filter-pill is-active" type="button" data-filter="all">All</button>
+            <button class="filter-pill" type="button" data-filter="ai">AI</button>
+            <button class="filter-pill" type="button" data-filter="web">Web</button>
+            <button class="filter-pill" type="button" data-filter="qa">QA</button>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card" data-category="ai web" data-project="smartdocs">
+            <div class="project-visual smartdocs">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Case 01 / AI Web App</p>
+              <h3>SmartDocs</h3>
+              <p>
+                Built a local-first document assistant for summaries and quiz generation,
+                with auth and a clean study workflow.
+              </p>
+              <div class="tag-row">
+                <span>React</span>
+                <span>Express.js</span>
+                <span>Ollama</span>
+                <span>Firebase</span>
+              </div>
+              <button class="text-link" type="button">Open case file</button>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="ai qa" data-project="yolov8">
+            <div class="project-visual yolo">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Case 02 / Computer Vision</p>
+              <h3>YOLOv8 ID Card Detection</h3>
+              <p>
+                Contributed to a real-time detection pipeline: data prep, Label Studio
+                annotation, inference runs, and training workflow exposure.
+              </p>
+              <div class="tag-row">
+                <span>Python</span>
+                <span>YOLOv8</span>
+                <span>Label Studio</span>
+                <span>Ultralytics</span>
+              </div>
+              <button class="text-link" type="button">Open case file</button>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web" data-project="mine">
+            <div class="project-visual mine">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Case 03 / Team Build</p>
+              <h3>Mine Game Clone</h3>
+              <p>
+                Supported frontend layout, integration testing, deployment preparation,
+                and basic behavior checks for a full-stack team project.
+              </p>
+              <div class="tag-row">
+                <span>TailwindCSS</span>
+                <span>GraphQL</span>
+                <span>Razorpay</span>
+                <span>JWT</span>
+              </div>
+              <button class="text-link" type="button">Open case file</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section internship-section" id="internship" aria-labelledby="internship-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">QA Field Log</p>
+            <h2 id="internship-title">Scaler AI Labs: testing web replicas for AI agents.</h2>
+          </div>
+        </div>
+
+        <div class="internship-layout">
+          <article class="internship-card">
+            <p class="project-type">Dec 2025 - May 2026 / InterviewBit Software Services</p>
+            <h3>What I actually did</h3>
+            <p>
+              I tested high-fidelity replica applications used for reinforcement learning.
+              The work was practical: understand the product, try realistic user paths,
+              catch defects, document them in Excel, verify fixes, and sign off when ready.
+            </p>
+            <div class="internship-stats">
+              <div>
+                <strong>12</strong>
+                <span>assigned environments completed</span>
+              </div>
+              <div>
+                <strong>1-2</strong>
+                <span>environments per week</span>
+              </div>
+              <div>
+                <strong>Excel</strong>
+                <span>bug tracking and closure records</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="environment-shell">
+            <div class="environment-grid" aria-label="RL environments tested">
+              <button class="is-active" type="button" data-env="Adobe Sign">Adobe Sign</button>
+              <button type="button" data-env="Cal.com">Cal.com</button>
+              <button type="button" data-env="Rover">Rover</button>
+              <button type="button" data-env="MS Teams">MS Teams</button>
+              <button type="button" data-env="Workable">Workable</button>
+              <button type="button" data-env="Trello">Trello</button>
+              <button type="button" data-env="Shopify">Shopify</button>
+              <button type="button" data-env="Buffer">Buffer</button>
+              <button type="button" data-env="Box">Box</button>
+              <button type="button" data-env="Google Calendar">Google Calendar</button>
+              <button type="button" data-env="QuickBooks">QuickBooks</button>
+              <button type="button" data-env="SAP">SAP</button>
+            </div>
+            <article class="environment-panel" data-env-panel>
+              <p class="project-type">Selected Environment</p>
+              <h3>Adobe Sign</h3>
+              <p>
+                Validated document upload, signature request workflows, signing order,
+                status tracking, notifications, expiry, and multi-party edge cases.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Stack</p>
+            <h2 id="skills-title">Not a buzzword wall. A map of where I have touched the work.</h2>
+          </div>
+        </div>
+
+        <div class="skills-shell">
+          <div class="skill-tabs" role="tablist" aria-label="Skill groups">
+            <button class="skill-tab is-active" type="button" data-skill-tab="frontend">Frontend</button>
+            <button class="skill-tab" type="button" data-skill-tab="backend">Backend</button>
+            <button class="skill-tab" type="button" data-skill-tab="qa">QA</button>
+            <button class="skill-tab" type="button" data-skill-tab="tools">Tools</button>
+          </div>
+
+          <div class="skill-panel" data-skill-panel>
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, React basics, Tailwind UI, responsive layouts, and practical interface polish.</p>
+            <div class="skill-meter"><span style="width: 82%"></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section notes-section" id="notes" aria-labelledby="notes-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Field Notes</p>
+            <h2 id="notes-title">Small details that say more than a big headline.</h2>
+          </div>
+        </div>
+
+        <div class="notes-grid">
+          <article class="note-card wide">
+            <p class="project-type">Working Style</p>
+            <h3>Start by reproducing. Then explain clearly.</h3>
+            <p>
+              QA taught me that a useful defect ticket is a tiny product document:
+              steps, expected behavior, actual behavior, severity, and enough context
+              for another developer to fix it without guessing.
+            </p>
+          </article>
+          <article class="note-card">
+            <p class="project-type">Languages</p>
+            <h3>English, Hindi, Marathi</h3>
+            <p>Comfortable communicating across team and academic settings.</p>
+          </article>
+          <article class="note-card">
+            <p class="project-type">Education</p>
+            <h3>JNEC Aurangabad</h3>
+            <p>B.Tech CSE, CGPA 6.65/10, expected June 2026.</p>
+          </article>
+          <article class="note-card accent-card">
+            <p class="project-type">Next Target</p>
+            <h3>Developer role where testing sense is a strength.</h3>
+            <p>Full-stack, AI product, QA automation, or product engineering teams.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">Direct paths.</h2>
+          <p>GitHub, LinkedIn, email, and resume PDF in one clean place.</p>
+        </div>
+        <div class="link-directory" aria-label="Contact paths">
+          <a class="link-row" href="mailto:aniljangid1311@gmail.com" data-redirect>
+            <span>Email</span>
+            <strong>aniljangid1311@gmail.com</strong>
+          </a>
+          <a
+            class="link-row"
+            href="https://in.linkedin.com/in/anil-jangid-a03992293"
+            data-redirect
+          >
+            <span>LinkedIn</span>
+            <strong>in.linkedin.com/in/anil-jangid-a03992293</strong>
+          </a>
+          <a class="link-row" href="assets/docs/Anil-Jangid-CV.pdf">
+            <span>Open Resume PDF</span>
+            <strong>assets/docs/Anil-Jangid-CV.pdf</strong>
+          </a>
+          <a class="link-row" href="assets/docs/Anil-Jangid-CV.pdf" download="Anil-Jangid-CV.pdf">
+            <span>Download Resume PDF</span>
+            <strong>Anil-Jangid-CV.pdf</strong>
+          </a>
+          <a class="link-row" href="https://github.com/Anilj21" data-redirect>
+            <span>GitHub</span>
+            <strong>github.com/Anilj21</strong>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>(c) <span data-year></span> Anil Jangid</p>
+      <div>
+        <a href="assets/docs/Anil-Jangid-CV.pdf">Open Resume</a>
+        <a href="assets/docs/Anil-Jangid-CV.pdf" download="Anil-Jangid-CV.pdf">Download Resume</a>
+        <a href="https://github.com/Anilj21" data-redirect>GitHub</a>
+        <a href="https://in.linkedin.com/in/anil-jangid-a03992293" data-redirect>LinkedIn</a>
+      </div>
+    </footer>
+
+    <div class="modal" data-modal aria-hidden="true">
+      <div class="modal-backdrop" data-modal-close></div>
+      <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" aria-label="Close project details" data-modal-close>x</button>
+        <p class="project-type" data-modal-type></p>
+        <h2 id="modal-title" data-modal-title></h2>
+        <div class="modal-copy" data-modal-copy></div>
+        <div class="modal-tags" data-modal-tags></div>
+      </article>
+    </div>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
