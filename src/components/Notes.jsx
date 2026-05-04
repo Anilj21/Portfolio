@@ -8,14 +8,9 @@ export default function Notes() {
       wide: true,
     },
     {
-      type: 'Languages',
-      title: 'English, Hindi, Marathi',
-      body: 'Comfortable communicating across team and academic settings.',
-    },
-    {
       type: 'Education',
       title: 'JNEC Chh. Sambhajinagar',
-      body: 'B.Tech CSE, CGPA 6.65/10, expected June 2026.',
+      body: 'B.Tech CSE, CGPA 7.68/10, expected June 2026.',
     },
     {
       type: 'Next Target',

@@ -93,8 +93,8 @@ export default function Hero({ showToast }) {
           <p>testing modes: functional, UI, exploratory, regression</p>
         </div>
         <div className="metric-card terminal-card">
-          <code>status --open-to-work</code>
-          <p>developer roles, internships, AI/product teams</p>
+          <span className="status-badge">Open to work</span>
+          <p>Seeking developer roles, internships, and AI/product teams</p>
         </div>
       </aside>
     </section>
